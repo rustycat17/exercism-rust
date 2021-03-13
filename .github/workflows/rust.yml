@@ -16,9 +16,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Change directory
-      run: cd hello-world
     - name: Build
+      env:
+        PROJECT_PATH: ./hello-world
       run: cargo build --verbose
     - name: Run tests
+      env:
+        PROJECT_PATH: ./hello-world
       run: cargo test --verbose
