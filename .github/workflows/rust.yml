@@ -13,14 +13,12 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./hello-world
 
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      env:
-        PROJECT_PATH: ./hello-world
       run: cargo build --verbose
     - name: Run tests
-      env:
-        PROJECT_PATH: ./hello-world
       run: cargo test --verbose
