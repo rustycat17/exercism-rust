@@ -1,2 +1,5 @@
+# idea files
 /.idea/
 /*/.idea/
+
+/*/target/*
