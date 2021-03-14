@@ -11,7 +11,7 @@ env:
 
 defaults:
   run:
-    working-directory: ./armstrong-numbers
+    working-directory: ./reverse-string
 
 jobs:
   build:
