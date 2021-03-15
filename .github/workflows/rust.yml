@@ -11,7 +11,7 @@ env:
 
 defaults:
   run:
-    working-directory: ./beer-song
+    working-directory: ./matching-brackets
 
 jobs:
   build:
