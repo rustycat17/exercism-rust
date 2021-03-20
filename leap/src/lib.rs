@@ -1,3 +1,7 @@
 pub fn is_leap_year(year: u64) -> bool {
-    unimplemented!("true if {} is a leap year", year)
+    match year {
+        year if year % 4 == 0 && year % 100 != 0 => true,
+        year if year %400 == 0 => true,
+        _ => false
+    }
 }
