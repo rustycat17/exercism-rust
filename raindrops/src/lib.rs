@@ -1,19 +1,14 @@
 pub fn raindrops(n: u32) -> String {
-    let mut result = String::new();
+    let result = match (n % 3 == 0, n % 5 == 0, n % 7 == 0) {
+        (true, false, false) => String::from("Pling"),
+        (false, true, false) => String::from("Plang"),
+        (false, false, true) => String::from("Plong"),
+        (true, true, false) => String::from("PlingPlang"),
+        (true, false, true) => String::from("PlingPlong"),
+        (false, true, true) => String::from("PlangPlong"),
+        (true, true, true) => String::from("PlingPlangPlong"),
+        _ => n.to_string()
+    };
 
-    if &n % 3 == 0 {
-        result.push_str("Pling");
-    }
-    if &n % 5 == 0 {
-        result.push_str("Plang");
-    }
-    if &n % 7 == 0 {
-        result.push_str("Plong");
-    }
-
-    if result.is_empty() {
-        n.to_string()
-    } else {
-        result
-    }
+    result
 }
